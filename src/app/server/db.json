@@ -1,0 +1,40 @@
+{
+  "appointments": [
+    {
+      "id": 109,
+      "name": "Harsh",
+      "age": 23,
+      "email": "hk.harshkumar11@gmail.com",
+      "mobile": 7007344814,
+      "address1": "Mamta",
+      "address2": "Lalbagh",
+      "city": "Banglore",
+      "state": "Kar",
+      "country": "India",
+      "pincode": 560027,
+      "trainer": "female",
+      "physio": "yes",
+      "package": "package3",
+      "weeks": 7,
+      "amount": 10700
+    },
+    {
+      "id": 1663533390808,
+      "name": "Sharan Bejugam",
+      "age": 22,
+      "email": "sharan@gmail.com",
+      "mobile": 9912743500,
+      "address1": "qweq",
+      "address2": "qwe",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pincode": 560027,
+      "trainer": "female",
+      "physio": "yes",
+      "package": "package2",
+      "weeks": 2,
+      "amount": 3400
+    }
+  ]
+}

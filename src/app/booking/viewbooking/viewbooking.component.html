@@ -1,0 +1,37 @@
+<div class="container mt-2">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">S.No.</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Age</th>
+                <th scope="col">Address</th>
+                <th scope="col">Trainer Preference</th>
+                <th scope="col">Physio Required</th>
+                <th scope="col">Package</th>
+                <th scope="col">Total Amount</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of appointments let index = index; trackBy:trackByIndex">
+
+            <tr>
+                <th scope="row">{{index+1}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.mobile}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.age}}</td>
+                <td>{{item.address1 + " "+ item.address2}}</td>
+                <td>{{item.trainer}}</td>
+                <td>{{item.physio}}</td>
+                <td>{{item.package}}</td>
+                <td>{{item.amount}}</td>
+
+
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>
