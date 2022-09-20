@@ -1,0 +1,30 @@
+<div class="container mt-2">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">S.No.</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Message</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of queries let index = index; trackBy:trackByIndex">
+
+            <tr>
+                <th scope="row">{{index+1}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.mobile}}</td>
+                <td>{{item.subject}}</td>
+                <td>{{item.message}}</td>
+
+
+
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>

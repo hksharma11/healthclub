@@ -1,4 +1,8 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ToastrModule } from 'ngx-toastr';
 
 import { ViewbookingComponent } from './viewbooking.component';
 
@@ -8,7 +12,17 @@ describe('ViewbookingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ViewbookingComponent ]
+      imports:[
+        RouterTestingModule,
+        FormsModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        ToastrModule.forRoot()
+      ],
+      declarations: [ ViewbookingComponent ],
+      providers:[
+        HttpClient
+      ]
     })
     .compileComponents();
 

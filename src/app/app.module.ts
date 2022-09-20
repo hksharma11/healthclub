@@ -9,10 +9,12 @@ import { CreateAppointmentComponent } from './appointment/create-appointment/cre
 import { ContactusComponent } from './query/contactus/contactus.component';
 import { ViewbookingComponent } from './booking/viewbooking/viewbooking.component';
 import { FooterComponent } from './footer/footer.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ViewqueryComponent } from './query/viewquery/viewquery.component';
+import { LoggingInterceptor } from './logging.interceptor';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { ToastrModule } from 'ngx-toastr';
     CreateAppointmentComponent,
     ContactusComponent,
     ViewbookingComponent,
-    FooterComponent
+    FooterComponent,
+    ViewqueryComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,9 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot(), // ToastrModule added
     
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:LoggingInterceptor,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

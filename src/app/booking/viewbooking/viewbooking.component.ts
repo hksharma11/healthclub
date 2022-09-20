@@ -13,6 +13,8 @@ export class ViewbookingComponent implements OnInit {
   ngOnInit(): void {
     this.api.get(this.url).subscribe(res=>{
       this.appointments =res;
+      console.log(this.appointments)
+      console.log(typeof this.appointments)
     })
   }
 

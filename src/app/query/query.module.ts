@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { QueryRoutingModule } from './query-routing.module';
 import { ContactusComponent } from './contactus/contactus.component';
+import { ViewqueryComponent } from './viewquery/viewquery.component';
 
 
 @NgModule({
   declarations: [
-    ContactusComponent
+    ContactusComponent,
+    ViewqueryComponent
   ],
   imports: [
     CommonModule,

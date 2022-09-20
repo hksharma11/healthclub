@@ -4,11 +4,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ToastrModule } from 'ngx-toastr';
 
-import { CreateAppointmentComponent } from './create-appointment.component';
+import { ViewqueryComponent } from './viewquery.component';
 
-describe('CreateAppointmentComponent', () => {
-  let component: CreateAppointmentComponent;
-  let fixture: ComponentFixture<CreateAppointmentComponent>;
+describe('ViewqueryComponent', () => {
+  let component: ViewqueryComponent;
+  let fixture: ComponentFixture<ViewqueryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -19,16 +19,14 @@ describe('CreateAppointmentComponent', () => {
         ReactiveFormsModule,
         ToastrModule.forRoot()
       ],
-      
-      declarations: [ CreateAppointmentComponent ],
+      declarations: [ ViewqueryComponent ],
       providers:[
         HttpClient
       ]
-      
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CreateAppointmentComponent);
+    fixture = TestBed.createComponent(ViewqueryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

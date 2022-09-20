@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Appointment } from 'src/app/server/appointment';
 import { ApiService } from 'src/app/services/api.service';
@@ -11,7 +12,7 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class CreateAppointmentComponent implements OnInit {
 
-  constructor(private formbuilder:FormBuilder,private toastr: ToastrService, private api:ApiService) { }
+  constructor(private router:Router,private formbuilder:FormBuilder,private toastr: ToastrService, private api:ApiService) { }
   url ="http://localhost:3000/appointments";
   formSubmited=false;
   added=false;
@@ -66,6 +67,8 @@ export class CreateAppointmentComponent implements OnInit {
       
       this.api.post(this.url,body).subscribe(res=>{
         console.log(res)
+        this.toastr.success('Appointment Saved');
+        this.router.navigateByUrl('/view-appointment');
       })
       
 
